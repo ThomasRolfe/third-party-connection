@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\App;
 
 class ThirdPartyActionFactory
 {
-    public static function createGetOrdersService(
+    public static function makeGetOrders(
         Channel $channel,
         ConnectionConfig $connectionConfig
     ): ThirdPartyAction

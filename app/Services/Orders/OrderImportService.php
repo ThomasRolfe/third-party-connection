@@ -23,8 +23,8 @@ class OrderImportService
     {
         // For this channel, get the connection config
         $connectionConfig = $channel->connectionConfig;
-        $orderFetchService = ThirdPartyActionFactory::createGetOrdersService($channel, $connectionConfig);
-        $inboundOrderTransformer = ThirdPartyTransformerFactory::createInboundOrderTransformer($channel);
+        $orderFetchService = ThirdPartyActionFactory::makeGetOrders($channel, $connectionConfig);
+        $inboundOrderTransformer = ThirdPartyTransformerFactory::makeInboundOrderTransformer($channel);
 
         try {
             $orders = $orderFetchService->execute();

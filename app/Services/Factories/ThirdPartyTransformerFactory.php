@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\App;
 
 class ThirdPartyTransformerFactory
 {
-    public static function createInboundOrderTransformer(Channel $channel)
+    public static function makeInboundOrderTransformer(Channel $channel)
     {
         switch($channel->name) {
             case 'woocommerce':
