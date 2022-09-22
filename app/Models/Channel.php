@@ -21,7 +21,7 @@ class Channel extends Model
 
     public function connectionConfig()
     {
-        switch($this->name) {
+        switch($this->channelIntegration->name) {
             case 'woocommerce':
                 return $this->hasOne(WoocommerceConnectionConfig::class);
             case 'amazon':
